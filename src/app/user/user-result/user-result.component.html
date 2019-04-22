@@ -1,0 +1,51 @@
+<h1 class="display-4 h1-responsive text-center" style="font-family: 'Kaushan Script', cursive;  color:#45526e;">
+    Thank you!
+  </h1>
+  <h2 class="display-4 h1-responsive text-center" style="font-family: 'Kaushan Script', cursive;  color:#45526e;">
+    Your Quiz has been submitted.
+  </h2>
+  
+  <br>
+  <br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+        <img src="../../../assets/images/Result-page.png"  style="padding-left:10px;"class="img-responsive wow animated slideInLeft" data-wow-delay="0.2s">
+    </div>
+    <div class="col-md-3">
+    
+    </div> 
+
+    <div class="col-md-3">
+      <div class="text-center">
+
+      <p class="h5-responsive">
+        Total attempted Questions:{{result.correctAnswers+result.incorrectAnswers}}
+      </p>
+      
+      <p class="h5-responsive">
+        Total correct answer:{{result.correctAnswers}}
+      </p>
+      
+      <p class="h5-responsive">
+        Total incorrect answer:{{result.incorrectAnswers}}
+      </p>
+      
+      <p class="h5-responsive">
+        Total score:{{result.marksObtained}}
+      </p>
+      
+      <br>
+      <br>
+      
+      <p>
+        <button type="button" routerLink="/user/dashboard" class="btn btn-lg btn-rounded btn-outline-primary" style="width:180;" mdbTooltip="clicking me will redirect to dashboard" placement="top" mdbWavesEffect>
+          OK
+        </button>
+      </p>
+    </div>
+    </div>
+  </div>
+</div>  
+  

@@ -1,0 +1,48 @@
+.example-form {
+    width: 80%;
+    height: 100%;
+}
+
+h1 {
+    align-content: center;
+}
+
+.mat-card-title {
+    size: 40px;
+    color: blue;
+}
+
+.head {
+    font-size: 40px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+
+/* .mat-button,
+.mat-raised-button {
+    background-color: green;
+} */
+
+.example-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.example-button-row button,
+.example-button-row a {
+    margin-right: 8px;
+}
+
+.top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.btn-color{
+    background-color: #45526e !important;
+}

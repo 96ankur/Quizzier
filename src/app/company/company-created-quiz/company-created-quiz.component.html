@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <mat-accordion>
+          <div *ngFor="let quiz of QuizDetails">
+          <mat-expansion-panel opened="false" style="height:auto; width: 90%;">
+            <mat-expansion-panel-header style="width:100%;">
+            <div class="row">
+                
+                    
+                    <div class="col-md-2 col-sm-12  col-xs-12  font black-font">
+                       Quiz Name : {{quiz.quizName}}
+                      </div>
+                      <div class="col-md-2 col-sm-12col-xs-12 font black-font">
+                       No of Questions : {{quiz.noOfQues}}
+                      </div>
+                      <div class="col-md-2 col-sm-12 col-xs-12  font black-font">
+                       Time Duration : {{quiz.timeDuration}} mins
+                      </div>
+                      <div class="col-md-2 col-sm-12 col-xs-12  font black-font">
+                       Test Date : {{quiz.testDate}} 
+                      </div>
+                      <div class="col-md-2 col-sm-12 col-xs-12  font black-font">
+                        Created By: {{quiz.createdBy}}
+                      </div>
+                      <div class="col-md-2   font black-font">
+                          <button color="primary" mat-raised-button type="button" class= "btn-color" (click)="deleteQuiz(quiz._id)" >
+                              DELETE
+                           </button>
+                     
+                      </div> 
+                    </div>  
+            </mat-expansion-panel-header>
+            <div class="card " style="border-left: 6px solid #3B5998 ;">
+              <div *ngFor="let Ques of quiz.Questions">  
+              <div class="card-header">
+                  Question: {{Ques.question}}
+                </div>
+                <div cl ass="card-body">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8">
+                          <p>Correct Answer :{{Ques.correctAnswer}} </p><br>
+                          <div *ngFor="let incorrect of Ques.incorrectAnswers;index as i">
+                           <div *ngIf="i<3">
+                            <p>Incorrect Answer {{i+1}}:{{incorrect}} </p><br>
+                           </div>
+                            <!-- <p>Incorrect Answer 2: </p><br>
+                            <p>Incorrect Answer 3: </p><br> -->
+                        </div>
+                      </div>
+                      <div class="col-md-2"></div>
+                    </div>
+                      
+                </div>          
+            </div>
+          </div> 
+          </mat-expansion-panel>
+         </div>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+
+  

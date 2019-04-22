@@ -1,0 +1,12 @@
+h3{
+    color:#4c4c4c!important;
+}
+.btn-outline-primary{
+    border-color:#666666 !important; 
+    color: #4c4c4c !important;  
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+    color: #fff !important;
+    background-color: #45526e !important;
+    border-color:#45526e !important; /*set the color you want here*/
+}

@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "",
+    "db":"mongodb://quizzierAdmin:quiz1908@ds125422.mlab.com:25422/quizzier"
+}

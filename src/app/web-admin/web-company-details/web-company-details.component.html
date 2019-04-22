@@ -1,0 +1,140 @@
+<mat-toolbar>
+    <span class="black-font font">Sort by: &nbsp; &nbsp; &nbsp; </span>
+    <button type="button" class="btn btn-md btn-success" (click)="approvedCompany()">Approved</button>
+    &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-md btn-danger" (click)="disapprovedCompany()">Disapproved</button>
+    &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-md btn-mdb-color" (click)="pendingCompany()">Pending</button>
+    
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  
+
+    
+    <br>
+</mat-toolbar> 
+ 
+
+<br>
+<div class="font black-font">
+  COMPANY NAME
+</div>
+<br>
+
+
+<mat-accordion class="example-headers-align">
+  <!-- Company name 1 -->
+ <div *ngFor='let company of companyDetails'> 
+  <mat-expansion-panel opened="false" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="black-font font">
+        {{company.companyName}}
+      </mat-panel-title>
+      <mat-panel-description>
+          <div class="col-md-6"></div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-sm btn-outline-success"data-toggle="modal" data-target="#basicExample" (click)="frame1.show()" (click)="companyNamepassing(company.companyName)" mdbWavesEffect>
+                  Approve
+              </button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-sm btn-outline-danger"data-toggle="modal" data-target="#basicExample" (click)="frame2.show()" (click)="companyNamepassing(company.companyName)" mdbWavesEffect>
+                  Disapprove
+              </button>
+          </div>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-sm-12 font black-font">
+              Date of registration:{{company.created_on}}
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Username: {{company.userName}}
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Email id: {{company.email}}
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Phone: {{company.phone}}
+            </div>
+            <div class="col-md-12 font black-font">
+              Status: {{company.status}}
+            </div>
+      </div>
+    </div>   
+  </mat-expansion-panel>
+</div> 
+
+
+</mat-accordion>
+
+
+<div mdbModal #frame1="mdbModal" class="modal fade left" id="frame1ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning modal-side modal-bottom-right" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Warning!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame1.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            Are you sure that you want to approve?
+          </p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="approveStatus()">OK </a>
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="frame1.hide()">Cancel</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<div mdbModal #frame2="mdbModal" class="modal fade left" id="frame2ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning modal-side modal-bottom-right" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Warning!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame2.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            Are you sure that you want to disapprove?
+          </p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="disapproveStatus()">OK </a>
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="frame2.hide()">Cancel</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

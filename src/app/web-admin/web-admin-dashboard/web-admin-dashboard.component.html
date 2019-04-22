@@ -1,0 +1,152 @@
+<!--
+  navigation
+-->
+<mdb-navbar  SideClass="navbar fixed-top navbar-expand-lg navbar-dark  mdb-color scrolling-navbar " [containerInside]="false" >
+ 
+    <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+              <strong>
+                  <img height="50" width="170" src="../../assets/images/logo-final.png">
+              </strong>
+            </a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav ml-auto">
+              
+                <li class="nav-item active waves-light" >
+                    <a routerLink="../dashboard" routerLinkActive="active" class="nav-link">Dashboard<span class="sr-only">(current)</span></a>
+                </li> 
+                <li class="nav-item  waves-light" >
+                    <a [routerLink]="" class="nav-link" (click)="logout()">Logout</a>
+                </li>
+               
+               
+                            
+            </ul>
+        </links>
+    </mdb-navbar> 
+
+ <!--
+   header image
+ -->
+ <div class="row">
+    <div class="col-sm-12 col-md-12">  
+        <div id="box1" style="background-image:url(assets/images/dashboard.jpg) ;
+        height: 50vh;width: 100%;background-size: cover;display: table;background-attachment: fixed;" class="img-responsive">
+         <br><br>  
+        <div class="row">
+             <div class="col-md-4"></div>
+             <div class="col-md-4">
+                <div class="box text-center" style="text-align: center">
+                    Hey Admins!
+                  </div>
+                  <div class="word text-center">
+                        
+                      <span>Akash </span>
+                      <span>Ankur </span>
+                      <span>Sahil </span>
+                      
+                     
+                   </div>
+             </div>
+             <div class="col-md-4">
+                
+         
+             </div>
+              
+          </div>      
+      </div>
+    </div>	
+</div>
+
+
+<!--
+  body
+-->
+
+  <!-- <br><br><br> -->
+  <!--cards for user dashboards-->
+  <div class="container" [hidden]="hideElement">
+    <div class="row">
+      <div class=" col-md-3">
+        <mat-card class="dashboard-cards" style="box-shadow:3px 3px 5px 6px #ccc;" >
+          <mat-card-content>
+            <div class="pic">
+                 <img  src="assets/images/companyDetails.png" alt="Photo of a Shiba Inu">
+            </div>
+            <div class="action">
+              <button routerLink="companyDetails" routerLinkActive="active" class="btn btn-outline-info btn-lg">Company Details</button>
+            </div>
+            <ul class="bottom-space">
+              <li><a href="#"></a></li>
+              <li><a href="#" ></a></li>
+              <li><a href="#" ></a></li>
+            </ul>
+          </mat-card-content>
+        </mat-card> 
+      </div>
+      <div class=" col-md-3">
+        <mat-card class="dashboard-cards" style="box-shadow:3px 3px 5px 6px #ccc;" >
+          <mat-card-content>
+            <div class="pic">
+                 <img  src="assets/images/conductedQuiz.png" alt="">
+            </div>
+            <div class="action">
+              <button routerLink="quizConducted" routerLinkActive="active" class="btn btn-outline-info btn-lg">Quiz Conducted</button>
+            </div>
+            <ul class="bottom-space">
+              <li><a href="#"></a></li>
+              <li><a href="#" ></a></li>
+              <li><a href="#" ></a></li>
+            </ul>
+          </mat-card-content>
+        </mat-card> 
+      </div>
+      <div class=" col-md-3  ">
+        <mat-card class="dashboard-cards" style="box-shadow:3px 3px 5px 6px #ccc;" >
+          <mat-card-content>
+            <div class="pic">
+                 <img  src="assets/images/pendingQuiz.jpg" alt="Photo of a Shiba Inu">
+            </div>
+            <div class="action">
+              <button routerLink="quizPending" routerLinkActive="active" class="btn btn-outline-info btn-lg"> &nbsp;&nbsp;&nbsp; Quiz&nbsp; Pending</button>
+            </div>
+            <ul class="bottom-space">
+              <li><a href="#"></a></li>
+              <li><a href="#" ></a></li>
+              <li><a href="#" ></a></li>
+            </ul>
+          </mat-card-content>
+        </mat-card> 
+      </div>
+      <div class=" col-md-3 ">
+        <mat-card class="dashboard-cards" style="box-shadow:3px 3px 5px 6px #ccc;" >
+          <mat-card-content>
+            <div class="pic">
+                 <img  src="assets/images/userRegistered.png" alt="Photo of a Shiba Inu">
+            </div>
+            <div class="action">
+                <p class="text-center">&nbsp; Users  &nbsp; Registered &nbsp;: {{userCount}}</p>
+                <p class="text-center">Companies &nbsp; Registered : {{companyCount}}</p>
+                
+            </div>
+              
+            <ul class="bottom-space">
+              <li><a href="#"></a></li>
+              <li><a href="#" ></a></li>
+              <li><a href="#" ></a></li>
+            </ul>
+          </mat-card-content>
+        </mat-card> 
+      </div>    
+    </div>   
+  </div>
+  
+
+<!--
+    footer
+-->
+<br><br><br>
+
+
+<router-outlet></router-outlet>

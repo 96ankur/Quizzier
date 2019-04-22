@@ -1,0 +1,30 @@
+<div mat-dialog-content>
+    <h1 mat-dialog-title> Add question </h1>
+    <div class="example-form">
+        <form [formGroup]="AddQuestionForm">
+            <div formArrayName="itemRows">
+                <!-- Check the correct way to iterate your form array -->
+                <div *ngFor="let itemrow of AddQuestionForm.controls.itemRows.controls; let i=index" [formGroupName]="i">
+                    <h4>Question No. #{{ i + 1 }}</h4>
+                    <div class="form-group">
+                        <label>Question</label>
+                        <input formControlName="question" required placeholder="Question" class="form-control">
+                        <label>Correct Answer</label>
+                        <input formControlName="correctAnswer" placeholder="Correct Answer" class="form-control">
+                        <label>Incorrect Answer 1</label>
+                        <input formControlName="incorrectAnswer1" class="form-control" placeholder="Incorrect Answer">
+                        <label>Incorrect Answer 2</label>
+                        <input formControlName="incorrectAnswer2" class="form-control" placeholder="Incorrect Answer">
+                        <label>Incorrect Answer 3</label>
+                        <input formControlName="incorrectAnswer3" class="form-control" placeholder="Incorrect Answer">
+                    </div>
+                    <button *ngIf="AddQuestionForm.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger btn-color">Delete</button>
+                </div>
+            </div>
+            <button type="button" (click)="addNewRow()" class="btn btn-primary btn-color">Add new Row</button>
+            <mat-dialog-actions>
+                <button class="btn btn-info btn-block my-4 btn-color" (click)="close()" [disabled]="!AddQuestionForm.valid">Submit</button>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</div>

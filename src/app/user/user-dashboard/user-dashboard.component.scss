@@ -1,0 +1,214 @@
+
+
+ /*************************************
+    header text roll over effect
+ ***********************************/
+
+ .box{
+    margin-top:70px;
+    
+    
+    font-weight: bold;
+    font-size:40px;;
+    
+    color:#fff;
+    text-shadow:0 3px 2px rgba(0,0,0,0.5);
+   }
+   
+   .word{
+    font-family:'Times New Roman', Times, serif;
+     
+      color:#3F51B5;
+   }
+   .word span
+   {
+       text-transform: uppercase;
+    font-size: 25px;   
+    position:absolute;
+    text-align:center;
+   overflow:hidden;
+    animation:animate 10s linear infinite;
+    opacity:0;
+    margin-left: -50px;
+   }
+  @keyframes animate{
+      0%
+      {
+        opacity:0;
+        transform:translateY(-50px);
+       }
+       2%
+       {
+      
+         opacity:1;
+        transform:translateY(0px);
+                        
+       }			  
+       18%
+       {
+         opacity:1;
+         transform:translateY(0px);
+        }
+        20%
+        {
+        opacity:0;
+        transform:translateY(50px);
+        }
+        100%
+        {
+        opacity:0;
+        transform:translateY(50px);
+      
+        }
+    }	
+        .word span:nth-child(1)
+        {
+        animation-delay:0s;
+        }
+        .word span:nth-child(2)
+        {
+        animation-delay:2s;
+        }
+        .word span:nth-child(3)
+        {
+        animation-delay:4s;
+        }
+        .word span:nth-child(4)
+        {
+        animation-delay:6s;
+        }
+        .word span:nth-child(5)
+        {
+        animation-delay:8s;
+        }
+  
+  
+  /*************************************
+    BODY 
+  ***********************************/          
+  
+    /* 
+    Cards design 
+    */
+    
+    .dashboard-cards
+    {
+       margin-top:40px;
+     padding-bottom: 40px;
+     background:#fff;
+     text-align:center;
+     overflow:hidden;
+     position:relative;
+     border-radius:10px;
+     box-shadow:3px 3px 5px 6px #ccc;
+   }
+  
+  .dashboard-cards .pic
+  { 
+    display:inline-block;
+    width:130px;
+    height:130px;
+    margin-bottom:50px;
+    position:relative;
+    z-index:1;
+   
+  
+  }
+  .dashboard-cards .pic:before{
+     content:"";
+     width:100%;
+     background:#3f51b5;
+     position:absolute;
+     bottom:200%;
+     right:0;
+     left:0;
+     transform:scale(3);
+     transform:all 0.3s linear 0s;   
+     border-radius:30px; 
+    
+    }
+    .dashboard-cards:hover  .pic:before{
+        height:100%;
+     
+     }
+     .dashboard-cards .pic .pic:after
+     {
+      
+         content:"";
+         width:100% ;
+         height:100%;
+         border-radius:50%;
+         position:absolute;
+         top:0;
+         left:0;
+  
+         z-index:-1;
+       }
+  
+     .dashboard-cards .pic img {
+       width:100%;
+       height:auto;
+       border-radius:50%;
+       transform:scale(1);
+       transition:all 0.5s ease 0s;
+       
+     }
+     .dashboard-cards:hover .pic img 
+     {
+       transform:scale(0.7);
+      }
+      
+      
+      .dashboard-cards .team-content{
+      
+         margin-bottom:30px;
+         
+      
+      }
+      
+      .dashboard-cards .bottom-space
+      {
+        width: 100%;
+        padding: 0;
+        margin : 0;
+        background:#3f51b5;
+        position :absolute ;
+        bottom : -100px;
+        left : 0;
+        transition:all 0.5s ease 0s; 
+      }
+      
+      .dashboard-cards:hover .bottom-space
+      {
+         bottom:0;
+      }
+      
+      .dashboard-cards .bottom-space li{
+         display:inline-block;
+      }
+      
+     
+       .btn-outline-info:hover {
+         background-color: #3F51B5;
+         color: white;
+         transition:all 0.7s ease 0s;
+         
+     }
+     .btn-outline-info{
+         color:#3F51B5;
+     }  
+  
+     .btn-outline-info:hover {
+      background-color: #3F51B5;
+      color: white;
+      transition:all 0.7s ease 0s;
+      
+  }
+  .btn-outline-info{
+      color:#3F51B5;
+      border-radius: 10px;
+  }  
+  
+  
+  
+   

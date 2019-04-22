@@ -1,0 +1,662 @@
+<!--
+Navigation
+-->
+
+<mdb-navbar  SideClass="navbar fixed-top navbar-expand-lg navbar-dark  mdb-color scrolling-navbar " [containerInside]="false" >
+ 
+    <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+              <strong style="font-weight:bold;">
+                <img height="50" width="170" src="../../assets/images/logo-final.png">
+              </strong>
+            </a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active waves-light" >
+                    <a  href="#features" class="nav-link">Features <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item waves-light" >
+                    <a href="#aboutUs" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item waves-light" >
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item waves-light" >
+                    <a href="#clients" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item waves-light" >
+                        <a href="#contactus" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item waves-light">
+                        <a class="nav-link" data-toggle="modal" data-target="#basicExample" (click)="frame1.show()">Login</a>
+                </li>
+                <li class="nav-item waves-light" >
+                    <a class="nav-link" data-toggle="modal" data-target="#basicExample" (click)="frame2.show()">Signup</a>
+                </li>
+                            
+            </ul>
+        </links>
+    </mdb-navbar>
+
+
+<!--
+    carousel
+-->
+
+<!--Carousel Wrapper-->
+<br>
+<mdb-carousel  [isControls]="true" class=" carousel slide carousel-fade" [animation]="'fade'">
+        <!--First slide-->
+        <mdb-carousel-item>
+            <div class="view">
+                <img class="d-block w-100" src="assets/images/slide1.jpg" alt="First slide">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption" >
+                <h2 class="h2-responsive animated bounceInUp">Quizzier</h2>
+                <p class="p-responsive animated slideInRight">Making quiz easier...</p>     
+         
+            </div>
+        </mdb-carousel-item>
+        <!--/First slide-->
+        <!--Second slide-->
+        <mdb-carousel-item>
+            <div class="view">
+                <img class="d-block w-100" src="assets/images/slide4.jpeg" alt="Second slide">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h2 class="h2-responsive animated bounceInDown">Quizzier</h2>
+                <p class="p-responsive animated slideInRight">Making quiz easier...</p>     
+         
+            </div>
+        </mdb-carousel-item>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <mdb-carousel-item>
+            <div class="view">
+                <img class="d-block w-100" src="assets/images/slide3.jpg" alt="Third slide">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h2 class="h2-responsive animated bounceInLeft">Quizzier</h2>
+                <p class="p-responsive animated slideInRight ">Making quiz easier...</p>     
+            
+            </div>
+        </mdb-carousel-item>
+        <!--/Third slide-->
+    </mdb-carousel>
+
+<div class="container features-content above" id="features">
+        <h2 class="text-center font-bold heading">Features</h2>
+        <br><br>
+        <div class="row">
+                <div class="col-md-4 col-sm-8 col-xs-16">
+                <br><br>
+                    <div class="card wow animated slideInLeft" data-wow-delay="0.2s">
+                        <div class="card-body">
+                                <img style="width: 20%; height: 20% " alt="AltText" src="assets/images/feature1.png" class="img-responsive">
+                                <span class="subheading" style="font-size: 22px;padding-left:20px;" >Simple Quiz Format </span> 
+            
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="card wow animated slideInLeft" data-wow-delay="0.3s">
+                            <div class="card-body">
+                                    <img style="width: 20%; height: 20%" alt="AltText" src="assets/images/feature2.png" class="img-responsive">
+                                    <span class="subheading" style="font-size: 22px;padding-left:20px;" >Easy Result Generation </span> 
+                
+                            </div>
+                   </div>
+                    <br>
+                   <div class="card wow animated slideInLeft" data-wow-delay="0.4s">
+                        <div class="card-body">
+
+                                <img style="width: 20%; height: 20%" alt="AltText" src="assets/images/feature3.png" class="img-responsive">
+                                <span class="subheading" style="font-size: 22px;padding-left:20px;" >Filters Available </span> 
+                                         
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="col-md-4 col-sm-8 col-xs-16 wow animated fadeInUp "  data-wow-delay="0.1s" >
+                       <img src="assets/images/features1.png" class="img-responsive center" style="width:240px;" alt="AltText">
+                </div>
+        
+                <div class="col-md-4 col-sm-8 col-xs-16">
+                    <br><br>
+                    <div class="card wow animated" data-wow-delay="0.4s">
+                            <div class="card-body ">
+                                    <span class="subheading slideInRight" style="font-size: 22px;" >Verifications Available &nbsp;&nbsp;&nbsp;</span> 
+                                    <img style="width: 20%; height: 20% " alt="AltText" src="assets/images/feature5.png" class="img-responsive">
+                              
+                            </div>
+                    </div>
+                    <br>
+                    <div class="card wow animated slideInRight" data-wow-delay="0.5s">
+                            <div class="card-body">
+                                    <span class="subheading" style="font-size: 22px;" >Record Maintenance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+                                    <img style="width: 20%; height: 20%" alt="AltText" src="assets/images/feature4.png" class="img-responsive">
+                                            
+                            </div>
+                    </div>
+                    <br>
+                    <div class="card wow animated slideInRight" data-wow-delay="0.6s">
+                            <div class="card-body">
+                                    <span class="subheading" style="font-size: 22px;" >Responsive Layout &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+                                    <img style="width: 20%; height: 20%" alt="AltText" src="assets/images/feature6.png" class="img-responsive">
+                                            
+                            </div>
+                    </div>
+
+                      
+                </div>
+            </div>
+      </div>
+      
+
+
+<!--
+    Counters
+-->
+ 
+<section class="counter-section above" style="background-image:url(assets/images/banner-bg.jpg) ;
+                height: 40vh;width: 100%;background-size: cover;display: table;background-attachment: fixed;margin-top:80px;padding-bottom:150px;padding-top:150px;"  >
+   <div class="container">
+      <div class="row">
+	     <div class="col-md-4 text-center">
+		     <i class="fa fa-pencil"></i><br><br>
+			 <span class="counter-section-title">{{quizCount}}</span><br>
+			 <span class="counter-section-description">No of quizzes</span>
+		 </div>
+		 <div class="col-md-4 text-center">
+		     <i class=" fa fa-graduation-cap"></i><br><br>
+			 <span class="counter-section-title">{{userCount}}</span><br>
+			 <span class="counter-section-description">No of students </span>
+		 </div>
+		 <div class="col-md-4 text-center">
+		     <i class="fa fa-user"></i><br><br>
+			 <span class="counter-section-title">{{companyCount}}</span><br>
+			 <span class="counter-section-description">No of clients</span>
+		 </div>
+		 
+	  </div>
+   </div>
+</section>
+
+  
+<!--
+
+<!
+    services
+-->
+
+<div class="container services-content  above" id="services">
+        <h2 class="text-center font-bold heading">Services</h2>
+        <br> 
+    <div class="row">
+            
+                <div class="col-md-6 col-sm-12 col-xs-24 services-card " >
+                        <mat-card class="example-card polaroid wow animated slideInLeft " data-wow-delay="0.6s"  style=" width:400px;  box-shadow:8px 8px 8px 8px #ccc;">
+                                <img mat-card-image src="assets/images/services1.jpg"  alt="Photo of a Shiba Inu">
+                        </mat-card>
+                              
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-24  " >
+                        <h3 class="subheading wow animated slideInRight" data-wow-delay="0.7s" style=" font-weight: 500; margin: 70px 0 20px;">Email and Mobile Services </h3> 
+                        <p align="justify" class="subheading-content wow animated zoomIn" data-wow-delay="0.8s">
+                            Provide OTP verification while signing up on mobile.
+                            Provide email verification for both users and companies. 
+                        </p>            
+                   </div>
+    
+            </div>
+    
+    <div class="row">
+            
+        <div class="col-md-6 col-sm-12 col-xs-24" >
+                <h3 class="subheading  wow animated slideInRight" data-wow-delay="0.6s" style=" font-weight: 500; margin: 70px 0 20px;">24*7 Support Service </h3> 
+                <p class="subheading-content wow animated zoomIn" data-wow-delay="0.7s">
+                    Provide 24*7 support services to help you out.
+                </p>            
+           </div>
+            <div class="col-md-6 col-sm-12 col-xs-24 services-card wow animated slideInLeft" data-wow-delay="0.8s" style="padding-left:40px;">
+                    <mat-card class="example-card polaroid " style=" width:400px;  box-shadow:8px 8px 8px 8px #ccc;">
+                            <img mat-card-image src="assets/images/services2.jpg"  alt="Photo of a Shiba Inu" >
+                          </mat-card>
+                          
+            </div>
+
+      </div>
+
+</div>
+<!--
+    about us
+-->
+<section class="aboutus  above" id="aboutUs" >
+        <div class="row">
+            <div class="col-sm-12 col-md-12">  
+                <div id="box1" style="background-image:url(assets/images/banner1.jpg) ;
+                height: 40vh;width: 100%;background-size: cover;display: table;background-attachment: fixed;" class="img-responsive">
+                    <div >
+                        <h2 class="text-center heading" style="color:#fff;" >About Us</h2>
+                        <p class="text-center wow animated zoomIn" data-wow-delay="0.6s" style="text-align: justify ;color:wheat;padding-left:50px;padding-right:50px;">
+                            Quizzier is designed to make your quiz-attempting easier. You will enjoy while performing quiz.
+                            It reduces the hassle of companies while designing the quiz. Our website will help in reducing paper wastage which most of the students think.
+                            User can check their results online and can compare with it's previous results.
+                        </p>
+                    </div>	
+                </div>
+            </div>	
+        </div>
+    </section>
+
+
+<!--
+    clients
+-->
+
+<h2 class="text-center font-bold heading above" id="clients">Clients</h2>  
+<br>   
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="false" class=" container carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+    <!--First slide-->
+    <mdb-carousel-item >
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card  client-cards">
+                <img class="img-fluid img-client" src="../../assets/images/vidya.jpg" alt="Card image cap">
+            </div>
+            
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card  client-cards">
+                <img class="img-fluid img-client" src="../../assets/images/fiitjee.jpg" alt="Card image cap">
+            </div>
+            
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card client-cards ">
+                <img class="img-fluid img-client" src="../../assets/images/made-easy.jpg" alt="Card image cap">
+            </div>
+            
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card client-cards">
+                <img class="img-fluid img-client" src="../../assets/images/kd-campus.png" alt="Card image cap">
+            </div>
+            
+        </div>
+    
+      </div>
+      <br> 
+    </mdb-carousel-item>
+    <!--/First slide-->
+    <mdb-carousel-item >
+        <div class="row">
+          <div class="col-md-3">
+              <div class="card client-cards ">
+                <img class="img-fluid img-client" src="../../assets/images/vision-ias.jpg" alt="Card image cap">
+              </div>
+              
+          </div>
+          <div class="col-md-3">
+              <div class="card client-cards ">
+                <img class="img-fluid img-client" src="../../assets/images/time.jpg" alt="Card image cap">
+              </div>
+              
+          </div>
+          <div class="col-md-3">
+              <div class="card client-cards">
+                <img class="img-fluid img-client" src="../../assets/images/alpha.jpg" alt="Card image cap">
+              </div>
+              
+          </div>
+          <div class="col-md-3">
+              <div class="card  client-cards ">
+                <img class="img-fluid img-client" src="../../assets/images/gate-academy.png" alt="Card image cap">
+              </div>
+              
+          </div>
+      
+        </div>
+        <br> 
+      </mdb-carousel-item>
+      
+    <!--second slide-->
+    <br>  
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
+<!--
+    footer
+-->
+
+
+
+
+<!--modal for login/signup-->
+
+<div mdbModal #frame1="mdbModal" class="modal fade top" id="frame1ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header text-center modal-color">
+                <h4 class="modal-title white-text w-100 font-weight-bold py-2">Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame1.hide()">
+                  <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+              </div>
+                 
+      <!--Body-->
+         <!--Body-->
+      <div class="modal-body">
+         
+            <mat-tab-group class="example-stretched-tabs"> 
+                <mat-tab label="User" class="active" >
+                  <br>
+                <form [formGroup]="userLoginForm" novalidate (ngSubmit)="onSubmitUserLoginForm(userLoginForm.value)">
+
+                    <mat-form-field class="full-width">
+                      <input matInput maxlength="25" placeholder="Email" formControlName="email" required>
+                      <span matSuffix (click)="hide = !hide"><i class="fa fa-envelope" style="color:gray;"></i></span>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userLoginForm.controls['email'].errors?.required &&
+                        userLoginForm.controls['email'].touched">Email is <b>Required</b></mat-error> 
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userLoginForm.controls['email'].errors?.pattern">Enter valid email</mat-error> 
+             
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                      <input matInput maxlength="25" placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'"  required>
+                      <span matSuffix (click)="hide = !hide"><i class="fa fa-eye " style="color:gray;"></i></span>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userLoginForm.controls['password'].errors?.required &&
+                       userLoginForm.controls['password'].touched">Password is <b>Required</b> </mat-error>
+                   
+                    </mat-form-field>                 
+                      <br><br>  
+                        <button mdbBtn type="submit" color="elegant" class="waves-light modal-color" mdbWavesEffect [disabled]="!userLoginForm.valid">
+                          Login
+                        </button>
+                        
+                </form>
+                       <br>
+                        <a routerLink="../forgotPassword">Forgot Password</a>
+                 
+                     
+                 </mat-tab>   
+                 <mat-tab label="Company" >
+                 <br>
+                 <form [formGroup]="companyLoginForm" novalidate (ngSubmit)="onSubmitCompanyLoginForm(companyLoginForm.value)">
+                  
+                  <mat-form-field class="full-width">
+                    <input matInput maxlength="25" placeholder="Email" formControlName="email" required>
+                    <span matSuffix ><i class="fa fa-envelope" style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="companyLoginForm.controls['email'].errors?.required &&
+                      companyLoginForm.controls['email'].touched">Email is <b>Required</b></mat-error> 
+                    <mat-error class="help-block form-error text-danger small" *ngIf="companyLoginForm.controls['email'].errors?.pattern">Enter valid email</mat-error> 
+           
+                  </mat-form-field>
+                  <mat-form-field class="full-width">
+                    <input matInput maxlength="25" placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'"  required>
+                    <span matSuffix (click)="hide = !hide"><i class="fa fa-eye " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="companyLoginForm.controls['password'].errors?.required &&
+                     companyLoginForm.controls['password'].touched">Password is <b>Required</b> </mat-error>
+                   
+                  </mat-form-field>                 
+                    <br><br> 
+                        <button mdbBtn type="submit" color="elegant" class="waves-light modal-color" mdbWavesEffect [disabled]="!companyLoginForm.valid">
+                          Login
+                        </button>
+                        
+                      </form>
+                      <BR>
+                        <a routerLink="../forgotPassword">Forgot Password</a>
+                 
+                  
+                </mat-tab>
+                 <br>
+         
+              </mat-tab-group>
+     
+        
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<div mdbModal #frame2="mdbModal" class="modal fade top" id="frame2ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center modal-color">
+        <h4  class="modal-title white-text w-100 font-weight-bold py-2">Signup
+            <span matSuffix class="signup"><i class="fa fa-pencil"></i></span> 
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame2.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+         
+          <mat-tab-group class="example-stretched-tabs"> 
+              <mat-tab label="User" class="active" >
+                <br>
+                <form [formGroup]="userSignupForm" novalidate (ngSubmit)="onSubmitUserSignupForm(userSignupForm.value)">
+
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Name" formControlName="name" required>
+                    <span matSuffix><i class="fa fa-pencil " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['name'].errors?.required &&
+                    userSignupForm.controls['name'].touched">name is <b>Required</b> </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['name'].errors?.minlength ">Minimum length is atleast 2  </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['name'].errors?.maxlength ">Maximum length is 15 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['name'].errors?.pattern ">only charaters is allow </mat-error>
+             
+                  </mat-form-field>
+
+                  
+                  <mat-form-field class="full-width"  hintLabel="Max 15 characters">
+                      <input  #input1 maxlength="15" matInput placeholder="Username" formControlName="userName" required>
+                      <mat-hint align="end">{{input1.value?.length || 0}}/15</mat-hint>
+                      <span matSuffix><i class="fa fa-user " style="color:gray;"></i></span>                   
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['userName'].errors?.required &&
+                      userSignupForm.controls['userName'].touched">Username is <b>Required</b> </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['userName'].errors?.minlength ">Minimum length is atleast 2 </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['userName'].errors?.maxlength ">Maximum length is 15 </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['userName'].errors?.pattern ">Username must contain 1 digit,1 uppercase and lowercase character </mat-error>
+                </mat-form-field>
+
+
+                  <mat-form-field class="full-width"  hintLabel="Enter like : Company Name">
+                    <input matInput placeholder="Company Name" formControlName="company" required style="text-transform:uppercase;" >
+                    <span matSuffix><i class="fa fa-building " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['company'].errors?.required &&
+                    userSignupForm.controls['company'].touched">company Name is <b>Required</b> </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['company'].errors?.minlength ">Minimum legth is atleast 2 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['company'].errors?.maxlength ">Maximum length is 40</mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['company'].errors?.pattern ">Only characters is allow </mat-error>                   
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Student Id" formControlName="StudentId" required>
+                    <span matSuffix><i class="fa fa-id-card " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['StudentId'].errors?.required &&
+                    userSignupForm.controls['StudentId'].touched">StudentId is <b>Required</b> </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['StudentId'].errors?.minlength ">Minimum length is atleast 1 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['StudentId'].errors?.maxlength ">Maximum length is 40 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['StudentId'].errors?.pattern ">Only digits and charaters is allow </mat-error>
+                  
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Email" formControlName="email" required>
+                    <span matSuffix><i class="fa fa-envelope " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['email'].errors?.required &&
+                    userSignupForm.controls['email'].touched">Email is <b>Required</b></mat-error> 
+                  <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['email'].errors?.pattern">Enter valid email</mat-error> 
+         
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Mobile" formControlName="phone" required>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['phone'].errors?.required &&
+                    userSignupForm.controls['phone'].touched">mobile no is <b>Required</b> </mat-error>
+                    
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['phone'].errors?.minlength">Minimum length is 10 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['phone'].errors?.maxlength">Minimum length is 10 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['phone'].errors?.pattern">Only numbers is allow that start with 7,8 or 9 </mat-error>
+                   
+                  </mat-form-field>
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                    <span matSuffix (click)="hide = !hide"><i class="fa fa-eye " style="color:gray;"></i></span>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['password'].errors?.required &&
+                     userSignupForm.controls['password'].touched">Password is <b>Required</b> </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['password'].errors?.minlength">Mimum length is 5 </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['password'].errors?.maxlength">Maximum length is 15   </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['password'].errors?.pattern">Password contain atleast 1 digit,1 uppercase ,1 lowercase charater and 1 special character <mat-error class="help-block form-error text-danger small" *ngIf="userSignupForm.controls['password'].errors?.minlength">Password is <b>Required</b> </mat-error>
+                    </mat-error>
+                
+                    </mat-form-field>
+          
+                 
+          
+                  <button mdbBtn type="submit" color="elegant" class="waves-light modal-color" mdbWavesEffect  [disabled]="!userSignupForm.valid">
+                    Submit
+                  </button>
+          
+                </form>
+                <br>
+                <div *ngIf="flag" >
+                <form [formGroup]="userSignupOTPForm" novalidate (ngSubmit)="onSubmitUserSignupOTPForm(userSignupOTPForm.value)">
+                  
+                  <mat-form-field class="full-width">
+                    <input matInput placeholder="otp" formControlName="otp" required >
+                    <mat-error class="help-block form-error text-danger small" *ngIf="userSignupOTPForm.controls['otp'].errors?.required &&
+                     userSignupOTPForm.controls['otp'].touched">OTP is <b>required</b> </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupOTPForm.controls['otp'].errors?.minlength">Minimum 5 digits required </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupOTPForm.controls['otp'].errors?.maxlength">Maximum 5 digits required </mat-error>
+                     <mat-error class="help-block form-error text-danger small" *ngIf="userSignupOTPForm.controls['otp'].errors?.pattern">OTP must contain digits only </mat-error> 
+          
+                    </mat-form-field>
+          
+                
+                  <button mdbBtn type="submit" color="elegant" class="waves-light modal-color" mdbWavesEffect [disabled]="!userSignupOTPForm.valid">
+                    Verify OTP
+                  </button>
+                  <BR>
+                    <a [routerLink]="" (click)="resendOTP()" >Resend OTP</a>
+          
+
+                </form>
+              </div>
+               </mat-tab>   
+               <mat-tab label="Company" >
+               <br>
+               <form [formGroup]="companySignupForm" novalidate (ngSubmit)="onSubmitCompanySignupForm(companySignupForm.value)">
+                
+                <mat-form-field class="full-width"  hintLabel="Max 15 characters">
+                   <input  #input maxlength="10" matInput placeholder="Username" formControlName="userName" required>
+                   <mat-hint align="end">{{input.value?.length || 0}}/15</mat-hint>
+                   <span matSuffix><i class="fa fa-user " style="color:gray;"></i></span>                   
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['userName'].errors?.required &&
+                   companySignupForm.controls['userName'].touched">userName is <b>Required</b> </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['userName'].errors?.minlength ">Minimum length is atleast 2 </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['userName'].errors?.maxlength ">Maximum length is 15</mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['userName'].errors?.pattern ">Username must contain 1 digit,1 uppercase and lowercase character</mat-error>
+                   
+     
+                  </mat-form-field>
+                 <mat-form-field class="full-width">
+                   <input matInput placeholder="Company Name" formControlName="companyName" style="text-transform:uppercase;" required hintLabel="Enter like : Company Name">
+                   <span matSuffix><i class="fa fa-pencil " style="color:gray;"></i></span>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['companyName'].errors?.required &&
+                   companySignupForm.controls['companyName'].touched">Company Name is <b>Required</b> </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['companyName'].errors?.minlength">Minimum length is 2 required </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['companyName'].errors?.maxlength">Maximum length is 50 required </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['companyName'].errors?.pattern">Only Characters Allowed </mat-error> 
+        
+       
+     
+                  </mat-form-field>
+
+                 <mat-form-field class="full-width">
+                   <input matInput placeholder="Email" formControlName="email" required>
+                   <span matSuffix><i class="fa fa-envelope " style="color:gray;"></i></span>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['email'].errors?.required &&
+                   companySignupForm.controls['email'].touched">Email is <b>Required</b></mat-error> 
+                 <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['email'].errors?.pattern">Enter valid email</mat-error> 
+        
+                  </mat-form-field>
+
+                 <mat-form-field class="full-width">
+                   <input matInput placeholder="Mobile" formControlName="phone" required>
+                   <span matSuffix><i class=" fa fa-phone" style="color:gray;"></i></span>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['phone'].errors?.required &&
+                   companySignupForm.controls['phone'].touched">Mobile no.  is <b>Required</b> </mat-error>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['phone'].errors?.minlength">Minimum length is 10</mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['phone'].errors?.maxlength">Maximum length is 10 </mat-error>
+                    <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['phone'].errors?.pattern">Only numbers is allow that start with 7,8 or 9  </mat-error>
+                  
+     
+                 </mat-form-field>
+                 <mat-form-field class="full-width">
+                   <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"  formControlName="password" required>
+                   <span matSuffix (click)="hide = !hide"><i class="fa fa-eye " style="color:gray;"></i></span>
+                   <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['password'].errors?.required &&
+                   companySignupForm.controls['password'].touched">Password is <b>Required</b> </mat-error>
+                 <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['password'].errors?.minlength">Minlength is 5 required </mat-error>
+                 <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['password'].errors?.maxlength">Maxlength is 15 required </mat-error>
+                 <mat-error class="help-block form-error text-danger small" *ngIf="companySignupForm.controls['password'].errors?.pattern">Password contain atleast 1 digit,1 uppercase ,1 lowercase charater and 1 special character </mat-error> 
+       
+                </mat-form-field>
+                
+                 <button mdbBtn type="submit" color="elegant" class="waves-light modal-color" mdbWavesEffect [disabled]="!companySignupForm.valid">
+                   Submit
+                 </button>
+               </form>
+               <br>
+               <br>
+               <div *ngIf="flag" >
+                <form [formGroup]="companySignupOTPForm" novalidate (ngSubmit)="onSubmitCompanySignupOTPForm(companySignupOTPForm.value)">
+                   
+                   
+
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="OTP" formControlName="otp" required>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="companySignupOTPForm.controls['otp'].errors?.required &&
+                      companySignupOTPForm.controls['otp'].touched">OTP is <b>Required</b> </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="companySignupOTPForm.controls['otp'].errors?.minlength">Minimum 5 digits required </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="companySignupOTPForm.controls['otp'].errors?.maxlength">Maximum 5 digits required </mat-error>
+                      <mat-error class="help-block form-error text-danger small" *ngIf="companySignupOTPForm.controls['otp'].errors?.pattern">OTP must contain digits only </mat-error> 
+                
+                     </mat-form-field>
+            
+                  
+                    <button  class="submit-btn" color="primary" mat-raised-button type="submit" [disabled]="!companySignupOTPForm.valid">
+                      Verify OTP
+                    </button>
+                    <BR>
+                    <a [routerLink]="" (click)="resendOTP()"  >Resend OTP</a>
+                  </form>
+                  
+               </div> 
+                    
+               </mat-tab>
+               <br>
+       
+            </mat-tab-group>
+   
+      
+    </div>
+    <!--/.Content-->
+  </div>
+</div>    

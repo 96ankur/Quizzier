@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-4">
+            <p>Attempted Question : </p>
+        </div>
+        <div class="col-md-4">
+            <p>Unattempted Question : </p>
+        </div>
+        <div class="col-md-4">
+            <p>Time : </p>
+        </div> -->
+<!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p>Attempted Question : </p>
+            </div>
+            <div class="col-md-4">
+                <p>Unattempted Question : </p>
+            </div>
+            <div class="col-md-4">
+                <p>Time : </p>
+            </div>
+        </div>
+    </div>
+     -->
+    <br><br>
+    
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-md-12">
+    
+                <div class="example-form">
+                    <form (ngSubmit)="onSubmituserAnswer()">
+                        <div>
+                            <!-- Check the correct way to iterate your form array -->
+                            <div *ngFor="let itemrow of userAnswer.controls?.submitAnswer?.controls; let i=index">
+                                <h4></h4>
+                                <div class="form-group">
+                                    <div class="card " style="border-left: 6px solid #3B5998 ;" *ngFor="let ques of quizDetails?.Questions; index as k">
+                                        <div class="card-header">
+                                            <p>Q{{k+1}}
+                                                <input type="text" class="form-control" value="{{ques.question}}" readonly></p>
+                                                <div style="display:none;">
+                                                    {{set(k, ques.question)}}
+                                                </div>
+                                        </div>
+    
+                                        <div class="card-body">
+                                            <div>
+                                                <!-- <input formControlName="answer" type="radio" value="{{}}">{{ques.incorrectAnswers[arrayForIncorrect[j]]}} -->
+                                                <mat-radio-group [aria-label]="k">
+                                                    <mat-radio-button (click)="add(k, ques.question, option)" style="display:block; width: 95vw;" *ngFor="let option of ques.incorrectAnswers; index as j" [value]="option">
+                                                        {{option}}
+                                                    </mat-radio-button>
+                                                  </mat-radio-group>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <button class="btn btn-info btn-block my-4" (click)="close()">Submit</button>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

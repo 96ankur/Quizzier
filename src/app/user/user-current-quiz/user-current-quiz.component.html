@@ -1,0 +1,111 @@
+<div class="container" [hidden]="hideElement">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mat-elevation-z8">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                  </mat-form-field>
+                  
+              <table mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+
+                <!--Quiz quiz Column -->
+                <ng-container matColumnDef="quizName">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Quiz Name</th>
+                  <td mat-cell *matCellDef="let row">{{row.quizName}}</td>
+                </ng-container>
+            
+      
+                <!-- quiz Date Column -->
+                <ng-container matColumnDef="timeDuration">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Quiz Duration</th>
+                  <td mat-cell *matCellDef="let row">{{row.timeDuration}}</td>
+                </ng-container>
+            
+                <ng-container matColumnDef="attemptNow">
+                    <th mat-header-cell *matHeaderCellDef >Attempt Now</th>
+                    <td mat-cell *matCellDef="let row">
+                        <button type="button" class="btn btn-md btn-rounded btn-outline-primary"data-toggle="modal" data-target="#basicExample" (click)="checkAttempt(row.quizName)" (click)="ID=row._id">
+                            Attempt Now
+                        </button>
+                    </td>
+                  </ng-container>
+              
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            
+              <mat-paginator #paginator
+                [length]="dataSource.data?.length"
+                [pageIndex]="0"
+                [pageSize]="50"
+                [pageSizeOptions]="[25, 50, 100, 250]">
+              </mat-paginator>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <!-- 
+   modal for instructions 
+ -->     
+
+<div [hidden]="hideElement" mdbModal #frame="mdbModal" class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header text-center modal-color">
+                <h1 class="heading lead">
+                        Instructions
+                </h1>
+    
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+    
+            <!--Body-->
+            <div class="modal-body">
+                <div>
+                    <p>
+                        Before starting the quiz, there are few instructions that need to be followed. 
+                    </p>
+                    <ol>
+                        <li>
+                            &nbsp;There will be x number of questions.
+                        </li>
+                        <li>
+                            &nbsp;Duration of quiz will be of x.
+                        </li>
+                        <li>
+                            &nbsp;Marking Scheme will be +4 for each correct answer and -1 for each incorrect answer
+                        </li>
+                        <li>
+                            &nbsp;No other tab, new window or any browser can be opened.
+                        </li>
+                        <li>
+                            &nbsp;Quiz will be submitted if you try to open a new tab!
+                        </li>
+                        <li>
+                            &nbsp;No changes will be done after submission of quiz.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <a  [routerLink]="['startQuiz',ID]" routerLinkActive="active" type="button" data-dismiss="modal" (click)="frame.hide()"  class="btn btn-primary waves-effect modal-color">I'm ready for test </a>
+                <a type="button" class="btn btn-primary waves-effect modal-color" data-dismiss="modal" (click)="frame.hide()">Not now</a>
+            </div>
+        </div>
+        <!--/Content-->
+    </div>
+    </div>
+    
+    <!--
+        all router view of this component go here 
+    -->    
+    
+    <router-outlet></router-outlet>

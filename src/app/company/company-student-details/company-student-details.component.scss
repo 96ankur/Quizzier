@@ -1,0 +1,43 @@
+.navbar-class{
+    background-color:#3B5998 !important;
+}
+
+.font{
+    font-family: 'Slabo 27px', serif;
+}
+
+.black-font{
+    color: black;
+}
+
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.width-modifier{
+    width: 100%;
+}
+
+.approved-border{
+    border: 10px solid green;
+}
+
+// .parallax { 
+//     /* The image used */
+//     background-image: url("image1.jpg");
+
+//     /* Set a specific height */
+//     height: 900px; 
+
+//     /* Create the parallax scrolling effect */
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
