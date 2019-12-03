@@ -1,5 +1,6 @@
 var logUser=require('../models/UserSchema');//require user schema for users
 var jwt=require('jsonwebtoken');
+const config = require('config');
 var resendOtp=require('./resendOtp')
 //for switching between UserSchema and TestAdminSchema (from front end)
 
@@ -19,7 +20,7 @@ exports.loginUser=(req,res)=>{
             }else if(data==null){
                 res.json({
                     success:false,
-                    msg:'This email is not registered'
+                    msg:'Incorrect credentials'
                 })
             }else{  
                 if(data.mobileVerification==true){
@@ -30,7 +31,7 @@ exports.loginUser=(req,res)=>{
                             companyName:data.companyName                
                         }
         
-                        var token=jwt.sign(tokenData,"secret") //here encryption is done 
+                        var token=jwt.sign(tokenData,config.get('jwtPrivateKey')) //here encryption is done 
                         if(data.password==req.body.password){
                             res.json({
                                 success:true,
@@ -40,7 +41,7 @@ exports.loginUser=(req,res)=>{
                         }else{
                             res.json({
                                 success:false,
-                                msg:"Incorrect Password"
+                                msg:"Incorrect credentials"
                             })
                         }
                     }else{

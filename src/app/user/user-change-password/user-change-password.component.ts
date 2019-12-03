@@ -41,8 +41,8 @@ onSubmitUserChangePasswordForm(value){
     }else{
       window.alert(res.msg)
     }
-  },err=>{
-    window.alert(err)
+  },errObj=>{
+    window.alert(errObj.error)
   })
 }
 }

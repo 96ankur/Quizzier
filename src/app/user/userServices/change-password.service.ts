@@ -15,7 +15,6 @@ export class ChangePasswordService {
   })
 
   changePassword(value){
-    console.log(this.header)
     return this._http.post('http://localhost:5000/user/changePassword',{
       newPassword:value.newPassword,
       oldPassword:value.oldPassword,
@@ -25,12 +24,7 @@ export class ChangePasswordService {
     }).pipe(catchError(this.errorHandler))
   }
 
-  errorHandler(errorResponse:HttpErrorResponse){
-    if(errorResponse.error instanceof ErrorEvent){
-      console.error('Client Side Error: ',errorResponse.error.message)
-    }else{
-      console.error('Server Side Error:')
-    }
-    return Observable.throw(errorResponse.name||"Server Error")
+  errorHandler(error: HttpErrorResponse){
+    return throwError(error || "Error")
   }
 }
